@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let result = []
+    function flatten(arr){
+        for(let i = 0;i <=arr.length;i++){
+            const items = arr[i];
+            if(arr.isArr(items)) {
+                result=result.concat(flatten(items))
+            }else{
+                result = result.push(items)
+            }
+        }return result;
+    }
+    console.log(result);
+    
+    
+</script>
+</html>
