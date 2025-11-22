@@ -1,0 +1,364 @@
+/* 头部导航开始 */
+.nav {
+  width: 1000px;
+  height: 45px;
+  background-color: #fff;
+  margin-top: -100px;
+  margin-left: 250px;
+  position: fixed;
+  z-index: 2;
+}
+
+.nav .left-nav img {
+  height: 25px;
+  width: 25px;
+  padding: 1px 2px;
+}
+
+.nav .left-nav input {
+  height: 25px;
+  width: 200px;
+  border-radius: 50px;
+  padding: 1px 2px;
+}
+
+.nav .left-nav {
+  float: left;
+}
+
+.right-nav div {
+  float: left;
+  padding: 0px 10px;
+}
+
+.right-nav img {
+  height: 25px;
+  width: 25px;
+}
+
+.right-nav {
+  margin-left: 600px;
+}
+
+body {
+  background-color: rgb(130, 112, 112);
+}
+
+.right-nav div p {
+  margin: 0;
+  font-size: 10px;
+  color: gray;
+}
+
+.right-nav div:click {
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.right-nav div:hover {
+  background-color: #333;
+}
+
+.io {
+  margin-left: 30px;
+}
+
+/* 头部导航结束 */
+/* 主体部分开始 */
+.main {
+  display: grid;
+  justify-items: center;
+  margin-top: 100px;
+  margin-left: 264.432px;
+  width: 1000px;
+  height: 1000px;
+  position: relative;
+  gap: 20px;
+}
+
+.main-left {
+  height: 400px;
+  margin-left: -900px;
+  position: fixed;
+}
+
+.main-mid {
+  background-color: blue;
+  width: 600px;
+  margin-left: -100px;
+  height: 80px;
+  margin-top: 0px;
+}
+
+.main-right {
+  background-color: orange;
+  width: 200px;
+  height: 600px;
+  margin-left: 770px;
+  margin-top: -500px;
+}
+
+.main-left .left-first img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.main-left .left-first .name {
+  font-weight: bolder;
+  margin: 2px 2px;
+}
+
+.main-left .left-first .home {
+  font-size: 10px;
+  color: gray;
+  margin: 2px 2px;
+}
+
+.main-left .left-first .work {
+  font-weight: bold;
+  margin: 2px 2px;
+}
+
+.main-left .left-first {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.main-left .left-second {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.main-left .left-second .friend {
+  font-weight: bolder;
+}
+
+.main-left .left-second .add {
+  color: gray;
+}
+
+.main-left .left-second img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  float: right;
+  margin-top: -80px;
+}
+
+.main-left .left-third .see {
+  color: gray;
+  font-size: 10px;
+}
+
+.main-left .left-third .word {
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.main-left .left-third {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.main-left .left-forth img {
+  display: inline;
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+
+.main-left .left-forth p {
+  font-weight: bolder;
+}
+
+.main-left .left-forth {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.first-top img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: inline;
+}
+
+.first-top input {
+  width: 500px;
+  border-radius: 20px;
+  margin: 20px;
+  position: absolute;
+}
+
+.first-bottom img {
+  width: 30px;
+  height: 20px;
+}
+
+.box {
+  float: left;
+  padding: 0px 50px;
+}
+
+.main-mid {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.user img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-top: -20px;
+}
+
+.content-first {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user div p {
+  margin: 0px;
+}
+
+.user div .big {
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.user div .big:hover {
+  color: skyblue;
+}
+
+.user div .small {
+  font-weight: lighter;
+  font-size: 10px;
+  color: gray;
+}
+
+.main-content img {
+  height: 300px;
+  width: 600px;
+}
+
+.main-right h2 {
+  margin: 2px;
+  font-size: 20px;
+}
+
+.main-right h3 {
+  margin: 2px;
+  font-size: 15px;
+  color: rgb(199, 179, 179);
+}
+
+.right-first p {
+  margin: 2px;
+}
+
+.bkk {
+  color: gray;
+  font-size: 10px;
+}
+
+.main-right {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.show-content {
+  display: none;
+}
+
+.show:hover .show-content {
+  display: block;
+}
+
+.under img {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+}
+
+.under div {
+  display: flex;
+  align-items: center;
+}
+
+.word-top {
+  font-size: 12px;
+  color: rgb(41, 38, 38);
+}
+
+.word1 {
+  font-size: 10px;
+  color: rgb(76, 100, 121);
+}
+
+.adver {
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 120px;
+}
+
+.adver .left-first img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.adver .left-first .name {
+  font-weight: bolder;
+  margin: 2px 2px;
+}
+
+.adver .left-first .home {
+  font-size: 10px;
+  color: gray;
+  margin: 2px 2px;
+}
+
+.adver .left-first a {
+  color: #333;
+  font-size: 10px;
+  margin-top: -150px;
+  display: block;
+  margin-left: 150px;
+}
+
+.bik:hover {
+  background-color: rgb(53, 117, 121);
+}
+
+.hand {
+  cursor: pointer;
+}
+
+.adver .left-first {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.main-left .left-first img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.box:hover {
+  background-color: gray;
+}
+
+/* 主体部分结束 */
