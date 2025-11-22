@@ -5,10 +5,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muxi Studio</title>
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
+    <div class="headcontain">
+        <div class="head">
+            <div class="inlogo">in</div>
+            <div class="search"><img src="../search.png"><div class="inputholder"><input type="text" placeholder="搜索"></div></div>
+            <ul class="libig">
+                <input type="radio" name="li" id="shouye" class="check1 check" checked>
+                <input type="radio" name="li" id="renmai" class="check2 check">
+                <input type="radio" name="li" id="xiaoxi" class="check3 check">
+                <input type="radio" name="li" id="zhiwei" class="check4 check">
+                <input type="radio" name="li" id="tonzhi" class="check5 check">
+                <input type="radio" name="li" id="yonghu" class="check6 check">
+                <label for="shouye" class="label1">
+                    <li>
+                        <img src="../首页-置灰.png">
+                        <p>首页</p>
+                    </li>
+                </label>
+                <label for="renmai" class="label2">
+                    <li>
+                        <img src="../人群.png">
+                        <p>人脉</p>
+                    </li>
+                </label>
+                <label for="xiaoxi" class="label3">
+                    <li>
+                        <img src="../消息.png">
+                        <p>消息</p>
+                    </li>
+                </label>
+                <label for="zhiwei" class="label4">
+                    <li>
+                        <img src="../职位.png">
+                        <p>职位</p>
+                    </li>
+                </label>
+                <label for="tonzhi" class="label5">
+                    <li>
+                        <img src="../通知.png">
+                        <p>通知</p>
+                    </li>
+                </label>
+                <label for="yonghu" class="label6">
+                    <li>
+                        <img src="../用户.png">
+                        <p>用户</p>
+                    </li>
+                </label>
+            </ul>
+            <div class="headend">
+                <div class="shangwu">
+                    <input type="checkbox" id="sw" class="sw">
+                    <img src="../商务.png">
+                    <label for="sw"><p>商务</p></label>
+                </div>
+                <div class="vip">
+                    <input type="checkbox" id="vip" class="viip">
+                    <img src="../金色.png">
+                    <label for="vip"><p>试用高级账户</p></label>
+                </div>
+            </div>
+        </div>
+        <div class="boddy">
+            <div class="boleft">
+                <div class="yonghujiemian">
+                    <img src="../早川秋(1).jpg" class="yonghutoux">
+                    <h1>早川秋</h1>
+                </div>
+                <!-- 左边这个界面下面的俩盒子暂时不做，以免没时间 -->
+            </div>
+            <div class="bomid scrolll">
+                <div class="bocon">
+                    <div class="midup">
+                        <div class="dontai">
+                            <img src="../早川秋(1).jpg">
+                            <div class="srdontai"><input type="text"></div>
+                        </div>
+                        <ul class="active">
+                            <li>
+                                <div class="ship">
+                                    <!-- 要考察的hover下划线我融进这里来了 -->
+                                    <img src="../021_视频.png" alt="">
+                                    <div class="actword"><span>视频</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="zhaop">
+                                    <img src="../021_照片.png" alt="">
+                                    <div class="actword"><span>照片</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wenz">
+                                    <img src="../021_文章.png" alt="">
+                                    <div class="actword"><span>文章</span></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="paixu">
+                        <div><span>排序：</span><span class="remen">热门</span></div>
+                    </div>
+                    <div class="midbot">
+                        <div class="bot1">
 
+                        </div>
+                        <div class="bot2"></div>
+                        <div class="bot3"></div>
+                        <div class="bot4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="boright scrolll">
+                <div class="rightcon">
+                    <div class="rightup">
+                        <input type="radio" name="cang" id="hidee" class="hidee">
+                        <div class="story">
+                            <div class="tell putt">aaaaaaaaaaaaaaaaAAA</div>
+                            <div class="tell putt">bbbbbbbbbbbbbbbbBBB</div>
+                            <div class="tell putt">ccccccccccccccccCCC</div>
+                            <div class="tell putt">ddddddddddddddddDDD</div>
+                            <div class="tell putt">eeeeeeeeeeeeeeeeEEE</div>
+                            <div class="tell putt">ffffffffffffffffFFF</div>
+                            <div class="tellhide">
+                                <div class="hide putt">AAAAAAAAAAAAAAAAAAAA</div>
+                                <div class="hide putt">BBBBBBBBBBBBBBBBBBBB</div>
+                                <div class="hide putt">CCCCCCCCCCCCCCCCCCCC</div>
+                                <div class="hide putt">DDDDDDDDDDDDDDDDDDDD</div>
+                                <div class="hide putt">EEEEEEEEEEEEEEEEEEEE</div>
+                                <div class="hide putt">FFFFFFFFFFFFFFFFFFFF</div>
+                            </div>
+                        </div> 
+                        <label for="hidee" class="zhankai">展开<img src="../展开.png"></label>
+                    </div>
+                    <a href="#" target="_blank">
+                        <div class="aadd">
+                            <img src="../金色.png">
+                            <div class="adcon"></div>
+                            <div class="ad">关注</div>
+                        </div>
+                    </a>
+                    <div class="fat">
+
+                    </div>
+                </div>
+            </div>
+            <input type="checkbox" id="tz" class="tizi">
+            <div class="tzcolumn">
+                <label for="tz" class="ttzz"><img src="../展开.png"></label>
+            </div>
+           
+        </div>
+    </div>
 </body>
 
 </html>
