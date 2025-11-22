@@ -17,6 +17,14 @@ function createGradeManager() {
      * @param {Object} student
      */
     addStudent(student) {
+      this.name=student.name
+      if(student.name=="")
+        return 0
+        
+      this.math=+ student[math]
+      this.english=+ student[english]
+
+
     },
 
     /**
@@ -24,6 +32,11 @@ function createGradeManager() {
      * @param {"math"|"english"} subject
      */
     getAverage(subject) {
+      var average=0
+      for(var i=0;i<Object.length;i++)
+      {average+=Object[i][subject]}
+      average=average/Object.length
+      
     },
 
     /**
@@ -32,6 +45,16 @@ function createGradeManager() {
      * @returns {Array} 排序后的新数组
      */
     getRankList(subject) {
+      for(var i=0;i<Object.length;i++)
+            {for(var j=0;j<Object.length-1-i;j++)
+                if(Object[j][subject]<Object[j+1][subject])
+                    {var file=Object[j]
+                     Object[j]=Object[j+1]
+                     Object[j+1]= file  
+                    }
+
+                            }                         
+
     },
 
     /**
@@ -39,6 +62,10 @@ function createGradeManager() {
      * @param {string} keyword
      */
     search(keyword) {
+      for(var i=0;i<Object.length;i++)
+        {if (keyword in Object[i])
+            {return Object[i]}
+        }
     },
 
     /**

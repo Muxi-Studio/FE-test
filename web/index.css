@@ -1,0 +1,371 @@
+.topleader{
+    z-index: 999;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    background-color: rgb(253, 253, 253);
+    width: 400%;
+    height: 60px;
+    border-bottom: 2px solid rgb(186, 186, 186)
+
+}
+.img1{
+    position: absolute;
+    top: 8px;
+    left: 20vh;
+    width: 60px;
+
+}
+.search{
+    top: 15px;
+    position: absolute;
+    left:40vh;
+    height: 30px;
+    border-radius: 15px;
+}
+.select{
+    position: absolute;
+    left: 90vh;
+    top: 10px;
+}
+.select::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    position: relative;
+    right: 34px;
+    top: 5px;
+
+    
+    background-color: black;
+
+}
+.select::before{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 22px;
+    background-image: url("首页.png");
+    background-size: 100%,100%;
+    position: relative;
+    right: 12px;
+}
+
+.leader1{
+    position: absolute;
+    left: 100vh;
+    top: 30px;
+    color: grey;
+}
+.leader1:hover{
+    color: black;
+}
+.leader2{
+    position: absolute;
+    left: 110vh;
+    top: 30px;
+    color: grey;
+}
+.leader2:hover{
+    color: black;
+}
+.leader3{
+    position: absolute;
+    left: 120vh;
+    top: 30px;
+    color: grey;
+}
+.leader3:hover{
+    color: black;
+}
+.leader4{
+    position: absolute;
+    left: 130vh;
+    top: 30px;
+    color: grey;
+}
+.leader4:hover{
+    color: black;
+}
+.leader5{
+    position: absolute;
+    left: 140vh;
+    top: 30px;
+    color: grey;
+}
+.leader5:hover{
+    color: black;
+}
+.leader6{
+    position: absolute;
+    left: 160vh;
+    top: 0px;
+    color: grey;
+    border-left: 2px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+.leader6:hover{
+    color: black;
+}
+.leader7{
+    position: absolute;
+    left: 170vh;
+    top: 30px;
+    color: grey;
+}
+.leader7:hover{
+    color: black;
+}
+.container{
+    position: absolute;
+    top:60px;
+    left: 0;
+    width:100% ;
+    height: 4000px;
+    background-color: rgb(226, 226, 226);
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left" "main" "right";
+
+}
+.left{
+    grid-area: "left";
+    background-color: rgb(227, 227, 227);
+}
+.personalmessage{
+    background-color: rgb(255, 255, 255);
+    height: 260px;
+    width: 20%;
+    border-radius: 20px;
+    position: fixed;
+    top: 70px;
+    left: 12%;
+
+ 
+}
+.header{
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    left: 10px;
+    top: 20px;
+}
+
+.friend{
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    width: 20%;
+    border-radius: 20px;
+    position: fixed;
+    top: 350px;
+    left: 12%; 
+}
+.friend1{
+    position: relative;
+    left: 10px;
+    top: 30px;
+    color: grey;
+}
+.friend1:hover{
+    color: rgb(27,100,192);
+}
+.Advice{
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    width: 20%;
+    border-radius: 20px;
+    position: fixed;
+    top: 470px;
+    left: 12%; 
+}
+.tool{
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    width: 20%;
+    border-radius: 20px;
+    position: fixed;
+    top: 590px;
+    left: 12%; 
+}
+.tool1{
+    position: relative;
+    left: 10px;
+    top:25%
+
+}
+.tool1:hover{
+    text-decoration: underline;
+}
+
+
+.main{
+    grid-area: "main";
+    background-color:   rgb(227, 227, 227);
+    display: grid;
+    grid-template-rows:100px 20px 600px 100px 600px 100px 200px 300px 100px ;
+    grid-template-areas: "title" "method" "tencent" "commend1" "video" "commend2" "recommend" "zijie" "commend3";
+
+}
+.title{
+    
+    grid-area: "title";
+    background-color: white;
+    border-radius: 20px;
+
+}
+.title1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    width: 30%;
+    left: 1.5%;
+   
+}
+.title1:hover{
+    background-color: rgb(211, 211, 211);
+}
+.title2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 12px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    width: 30%;
+    left: 34.7%;
+   
+}
+.title2:hover{
+    background-color: rgb(211, 211, 211);
+}
+.title3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 35px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    width: 30%;
+    left: 67.7%;
+   
+}
+.title3:hover{
+    background-color: rgb(211, 211, 211);
+}
+
+
+.method{
+    
+    grid-area: "method";
+    background-color:none;
+    border-radius: 0px;
+
+}
+.tencent{
+    grid-area: "tencent";
+    background-color: white;
+    border-radius: 15px;
+
+}
+.blue{
+    font-size: 25px;
+    position: relative;
+    left: 130px;
+    bottom: 30px;
+}
+.blue:hover{
+    color: rgb(27,100,192);
+}
+.commend1{
+    grid-area: "commend1";
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.video{
+    grid-area: "vedio";
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    top: 40px;
+
+}
+.right{
+    position: sticky;
+    top:70px;
+    grid-area: "right";
+    background-color:  rgb(227, 227, 227);
+
+}
+.rightcontainer{
+    background-color: rgb(227, 227, 227);
+    z-index: 10;
+    height: 1000px;
+    display: grid;
+    grid-template-rows: 500px 300px 200px;
+    grid-template-areas: "zixun" "advertise" "more";
+
+}
+.zixun{
+    grid-area: "zixun";
+    background-color: white;
+    position: relative;
+    left: 20px;
+    width: 70%;
+    border-radius: 20px;
+    display: grid;
+
+}
+.zixun1{
+
+    height: 30px;
+}
+.zixun1:hover{
+    background-color: rgb(220, 220, 220);
+}
+
+
+
+.advertise{
+    grid-area: "advertise";
+    background-color: white;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 70%;
+    border-radius: 20px;
+    display: grid;
+
+}
+.guanzhu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid rgb(27,100,192);;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    border-radius: 20px;
+    bottom: 20px;
+    color: rgb(27,100,192);
+
+   
+}
+ .guanzhu:hover{
+    background-color:rgba(27, 101, 192, 0.433) ;
+ }
