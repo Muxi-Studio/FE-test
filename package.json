@@ -11,11 +11,13 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "antd": "^5.29.0",
+    "antd": "^5.29.1",
     "axios": "^1.13.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router": "^7.9.6"
+    "react-router": "^7.9.6",
+    "sass": "^1.94.2",
+    "scss": "^0.2.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.0",

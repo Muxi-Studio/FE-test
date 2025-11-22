@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.addbox{
+    width: 400px;
+    height: 800px;
+    margin: 80px auto;
+    padding:2px
+}
+h2{
+    margin-left: 150px;
+}
+.addinput{
+    width:200px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.addbutton{
+    margin-left: 100px;
+    width: 200px;
+    margin-top: 10px;
+}
