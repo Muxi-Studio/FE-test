@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-color: rgba(253, 246, 229, 0.662);
+}
+
+.head {
+    position: fixed;
+    top: 0px;
+    box-shadow: -10px -100px 200px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.mid {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    /* background-color: aqua; */
+    line-height: 50px;
+}
+
+.logo {
+    position: relative;
+    left: 5px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(159, 255, 127);
+
+}
+
+.search {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    left: 5px;
+    top: 10px;
+    width: 250px;
+    height: 30px;
+    border-radius: 215px;
+    border: 1px solid black;
+}
+
+.photo1 {
+    margin-top: 5px;
+    margin-left: 10px;
+    background-size: contain;
+    background-image: url(sousuo.png);
+    width: 20px;
+    height: 20px;
+}
+
+.search input {
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 200px;
+    background-color: transparent;
+    color: rgb(40, 40, 40);
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 350px;
+    height: 100%;
+    /* background-color: rgb(255, 60, 0); */
+    position: relative;
+    left: 125px;
+    box-sizing: border-box;
+}
+
+.nav div {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.nav div:first-child {
+    background-image: url(首页.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 18px 3px;
+    opacity: 1;
+    border-bottom: 2px solid black;
+
+}
+
+.nav div:nth-child(2) {
+    background-image: url(用户群组.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 18px 3px;
+    opacity: 0.5;
+}
+
+.nav div:nth-child(3) {
+    background-image: url(办公.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 18px 3px;
+    opacity: 0.5;
+}
+
+.nav div:nth-child(4) {
+    background-image: url(消息.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 18px 3px;
+    opacity: 0.5;
+}
+
+.nav div:nth-child(5) {
+    background-image: url(通知.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 18px 3px;
+    opacity: 0.5;
+}
+
+.nav div:hover {
+    /* border-bottom: 2px solid black; */
+    opacity: 1;
+}
+
+
+
+text {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+
+    position: relative;
+    top: 12px;
+    left: 20px;
+
+}
+
+.shiyong {
+    background-image: url(图片.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 45px 10px;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 130px;
+    /* background-color: #2d0202; */
+}
+
+.shangwu {
+    background-image: url(九个点.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 18px 5px;
+    position: absolute;
+    right: 130px;
+    height: 100%;
+    width: 70px;
+    border-left: 2px solid black;
+    font-size: 13px;
+    /* background-color: rgb(255, 147, 14); */
+}
+
+.touxiang {
+    /* display: flex; */
+    position: absolute;
+    right: 200px;
+    height: 100%;
+    width: 50px;
+    /* background-color: rgb(127, 131, 255); */
+    box-sizing: border-box;
+
+}
+
+.photo2 {
+    position: relative;
+    top: 5px;
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+    /* border: 1px solid black; */
+    background-image: url(back1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.touxiang .text {
+    position: absolute;
+    bottom: 10px;
+    left: 18px;
+    height: 3px;
+    font-size: 13px;
+    line-height: 3px;
+}
+
+.shangwu .text {
+
+    position: absolute;
+    bottom: 10px;
+    left: 18px;
+    height: 3px;
+    font-size: 13px;
+    line-height: 3px;
+}
+
+.shiyong .text {
+    position: absolute;
+    bottom: 10px;
+    left: 18px;
+    height: 3px;
+    font-size: 13px;
+    line-height: 3px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    position: relative;
+    top: 75px;
+    /* background-color: aquamarine; */
+    /* height: 1000px; */
+}
+
+.my {
+
+    height: 400px;
+
+    /* background-color: black; */
+}
+
+.wo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+.backpic {
+    border-radius: 15px 15px 0 0;
+    height: 50px;
+    width: 100%;
+    background-image: url(back1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.my .touxiang1 {
+    background-image: url(back1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    /* border: 1px solid black; */
+    background-color: aliceblue;
+    position: absolute;
+    left: 20px;
+    bottom: 115px;
+    box-sizing: border-box;
+    border: 3px solid white;
+}
+
+.main1 {
+    position: relative;
+    height: 1000px;
+
+    /* background-color: blueviolet; */
+}
+
+.zixun {
+    border-radius: 10px;
+    height: 700px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(1, 1, 1, 0.2);
+}
+
+.wo p[class="name"] {
+    font-size: large;
+    position: absolute;
+    top: 70px;
+    left: 25px;
+    font-weight: 600;
+}
+
+p[class="diqu"] {
+    position: absolute;
+    top: 95px;
+    left: 25px;
+    font-size: small;
+    opacity: 0.6;
+}
+
+
+p[class="qiye"] {
+    position: absolute;
+    top: 130px;
+    left: 25px;
+    font-weight: 600;
+}
+
+.friend {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.friend p {
+    margin-left: 20px;
+    height: 15px;
+    font-size: small;
+    line-height: 15px;
+}
+
+.friend p:first-child {
+    font-weight: 700;
+}
+
+.money {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.money p {
+    margin-left: 20px;
+    height: 15px;
+    font-size: small;
+    line-height: 15px;
+    /* opacity: 0.5; */
+}
+
+.money p:first-child {
+    opacity: 0.5;
+}
+
+.money p a {
+    text-decoration: none;
+
+    float: left;
+    display: block;
+    opacity: 1;
+    text-indent: 1em;
+    line-height: 15px;
+    color: black;
+}
+
+.money p img {
+    float: left;
+    width: 15px;
+    height: 15px;
+}
+
+.tool {
+
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+
+
+    height: 140px;
+
+}
+
+.tool img {
+    width: 10px;
+    height: 10px;
+}
+
+.tool a span {
+    margin-left: 10px;
+}
+
+.tool a {
+    display: block;
+    height: 35px;
+    font-size: small;
+    text-decoration: none;
+    color: black;
+    line-height: 35px;
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+.tool a:hover {
+    text-decoration: underline;
+}
+
+.main1 .top {
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    width: 100%;
+    border: 1px solid rgba(1, 1, 1, 0.2);
+}
+
+.main1 .top .touxiang {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-image: url(back1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main1 .top input {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    outline: none;
+    height: 40px;
+    width: 85%;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-indent: 1em;
+}
+
+.main1 .top .option {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    bottom: 0px;
+    /* background-color: aqua; */
+
+}
+
+.option {
+    line-height: 45px;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.option a:hover {
+    background-color: gray;
+}
+
+.option img {
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+}
+
+.line {
+    height: 5px;
+}
+
+.line1 {
+
+    float: left;
+    margin-top: 20px;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    opacity: 0.2;
+}
+
+.line .text {
+    height: 100%;
+    position: relative;
+    bottom: 5px;
+}
+
+.line span:first-child {
+    font-size: small;
+    opacity: 0.6;
+
+
+}
+
+.line span:nth-child(2) {
+    opacity: 1;
+    font-size: small;
+    font-weight: 700;
+}
+
+.news {
+    position: relative;
+    margin-top: 35px;
+    width: 100%;
+}
+
+.news .one {
+    background-color: white;
+    width: 100%;
+    height: 550px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1.5px solid rgba(1, 1, 1, 0.1);
+}
+
+.news .one .user {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    height: 75px;
+    /* background-color: aqua; */
+
+}
+
+.user .touxiang {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.user .xx {
+    position: relative;
+    height: 75px;
+    width: 60%;
+    float: right;
+    /* background-color: blueviolet; */
+}
+
+.xx .name {
+    position: absolute;
+    top: -15px;
+    width: 100%;
+    height: 25px;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+
+.xx .subs {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 25px;
+    font-size: small;
+    opacity: 0.6;
+}
+
+.xx .time {
+
+    position: absolute;
+    width: 100%;
+    top: 35px;
+    height: 25px;
+    font-size: small;
+    opacity: 0.6;
+}
+
+.news .text {
+    padding: 0px;
+    position: relative;
+    top: 10px;
+    overflow: hidden;
+    width: 95%;
+    height: 100px;
+    margin: auto;
+    /* background-color: aqua; */
+    font-size: medium;
+    font-weight: 500;
+}
+
+.news .picture {
+    height: 250px;
+    width: 100%;
+    /* background-color: aquamarine; */
+    position: relative;
+    top: 30px;
+    background-image: url(back1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.news .footer {
+    display: flex;
+    position: relative;
+    top: 50px;
+    width: 93%;
+    height: 60px;
+    border-top: 1.5px solid rgba(1, 1, 1, 0.2);
+    /* background-color: aqua; */
+    margin: auto;
+    justify-content: space-around;
+}
+
+.footer div {
+    width: 100px;
+    height: 100%;
+    /* background-color: black; */
+    text-align: center;
+
+}
+
+.footer div img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+}
+
+.zixun p:first-child {
+    width: 100%;
+    height: 30px;
+    margin-top: 0px;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.zixun p:nth-child(2) {
+    width: 100%;
+    height: 30px;
+    margin-top: 0px;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+.zixun .story {
+    margin-top: 10px;
+    overflow: hidden;
+    height: 250px;
+
+}
+
+.active {
+    margin-top: 10px;
+    overflow: hidden;
+    height: 400px;
+
+    height: 400px;
+
+}

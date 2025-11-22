@@ -17,6 +17,19 @@ function createGradeManager() {
      * @param {Object} student
      */
     addStudent(student) {
+      uname1 = document.querySelector('#name')
+      math1 = document.querySelector('#math')
+      english1 = document.querySelector('#english')
+      function Student1() {
+        {
+          uname = uname1.value;
+          math = math1.value;
+          english = english1.value
+        }
+      }
+      if (uname1.value && uname1.value != " ") {
+        students.push(new this.addStudent)
+      }
     },
 
     /**
@@ -45,7 +58,7 @@ function createGradeManager() {
      * 获取全部学生（返回副本）
      */
     getAll() {
-      
+
     },
   };
 }

@@ -5,9 +5,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muxi Studio</title>
+    <link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
+    <div class="head">
+        <div class="mid">
+            <div class="logo"></div>
+            <div class="search">
+                <div class="photo1"></div>
+                <input type="text" value="搜索">
+            </div>
+            <div class="nav">
+                <div>
+                    <text>首页</text>
+                </div>
+                <div><text>人脉</text></div>
+                <div><text>职位</text></div>
+                <div><text>消息</text></div>
+                <div><text>通知</text></div>
+            </div>
+            <div class="shiyong">
+                <div class="text">试用高级账号</div>
+            </div>
+            <div class="shangwu">
+                <div class="text">商务</div>
+            </div>
+            <div class="touxiang">
+                <div class="photo2"></div>
+                <div class="text">我</div>
+            </div>
+        </div>
+    </div>
+    <div class="main mid">
+        <div class="my">
+            <div class="wo">
+                <div class="backpic"></div>
+                <div class="touxiang1">
+                </div>
+                <p class="name">Name</p>
+                <p class="diqu">香港特别行政区</p>
+                <p class="qiye">腾讯</p>
+            </div>
+            <div class="friend">
+                <p>好友</p>
+                <p>拓展职场人脉</p>
+            </div>
+            <div class="money">
+                <p>解锁高级账号工具与洞察</p>
+                <p><img src="图片.png" alt=""><a href="">试用高级账号</a></p>
+            </div>
+            <div class="tool">
+                <a href=""><img src="九个点.png" alt=""><span>我的收藏</span></a>
+                <a href=""><img src="九个点.png" alt=""><span>群组</span></a>
+                <a href=""><img src="九个点.png" alt=""><span>专栏</span></a>
+                <a href=""><img src="九个点.png" alt=""><span>活动</span></a>
+            </div>
+
+
+        </div>
+        <div class="main1">
+            <div class="top">
+                <div class="touxiang"></div>
+                <input type="text" value="发动态">
+                <div class="option">
+                    <a href=""><img src="视频.png" alt="">视频</a>
+                    <a href=""><img src="图片.png" alt="">图片</a href="">
+                    <a href=""><img src="编辑文章.png" alt="">写文章</a href="">
+                </div>
+            </div>
+            <div class="line">
+                <div class="line1"></div>
+                <div class="text"><span>排序方式:</span><span>热门</span></div>
+            </div>
+            <div class="news">
+                <div class="one">
+                    <div class="user">
+                        <div class="touxiang"></div>
+                        <div class="xx">
+                            <div class="name">yourname</div>
+                            <div class="subs">... 位关注者</div>
+                            <div class="time">2 周前</div>
+
+                        </div>
+                    </div>
+                    <div class="text">Sheet() Feature<br>
+                        ads
+                    </div>
+                    <div class="picture"></div>
+                    <div class="footer">
+                        <div><img src="赞同.png" alt="">赞</div>
+                        <div><img src="评论.png" alt="">评论</div>
+                        <div><img src="3.1转发.png" alt="">转发</div>
+                        <div><img src="send.png" alt="">发送</div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+        <div class="zixun">
+            <p>领英资讯</p>
+            <p>热门故事</p>
+            <div class="zom">
+                <div class="story">
+                    <div>?</div>
+                    <div>?</div>
+                    <div>?</div>
+                    <div>?</div>
+                    <div>?</div>
+                    <div>?</div>
+                    <div>?</div>
+                    <div>?</div>
+                    <div>?</div>
+                    <div>?</div>
+                </div>
+                <button>展开</button>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <script>
+        let zom = document.querySelector('.zom')
+        let btn = document.querySelector('button');
+        let story1 = document.querySelector('.story')
+        let a = 1
+        btn.addEventListener('click', function (e) {
+
+            story1.classList.toggle('active')
+            story1.classList.toggle('story')
+            if (a == 1) {
+                btn.innerHTML = '收起';
+
+
+                a = 0
+            }
+            else { btn.innerHTML = '展开'; a = 1 }
+        })
+    </script>
 
 </body>
 
