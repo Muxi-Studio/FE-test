@@ -10,6 +10,7 @@
 
 function createGradeManager() {
   const students = [];
+  const manager = createGradeManager();
 
   return {
     /**
@@ -17,6 +18,9 @@ function createGradeManager() {
      * @param {Object} student
      */
     addStudent(student) {
+      manager.addStudent({name:"张三",math:100,englishi:90});
+      manager.addStudent({name:"李四",math:85,englishi:95});
+      manager.addStudent({name:"王五",math:90,englishi:80});
     },
 
     /**
@@ -24,6 +28,7 @@ function createGradeManager() {
      * @param {"math"|"english"} subject
      */
     getAverage(subject) {
+      manager.getAverage("math");
     },
 
     /**
@@ -32,6 +37,7 @@ function createGradeManager() {
      * @returns {Array} 排序后的新数组
      */
     getRankList(subject) {
+      manager.getRankList("english");
     },
 
     /**
@@ -39,13 +45,14 @@ function createGradeManager() {
      * @param {string} keyword
      */
     search(keyword) {
+      manager.search("张");
     },
 
     /**
      * 获取全部学生（返回副本）
      */
     getAll() {
-      
+      manager.getAll();
     },
   };
 }
