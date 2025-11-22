@@ -22,6 +22,7 @@ const EmployeeCreateForm = () => {
             } else {
                 message.error(`创建失败：${res.message}`);
             }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (err: any) {
             message.error(`请求失败：${err.message || '网络异常'}`);
         } finally {

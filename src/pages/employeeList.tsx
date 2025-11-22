@@ -17,6 +17,7 @@ const EmployeeList = () => {
             } else {
                 message.error(res.message);
             }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (err: any) {
             message.error(err.message || '获取列表失败');
         } finally {
@@ -36,6 +37,7 @@ const EmployeeList = () => {
             } else {
                 message.error(res.message);
             }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (err:any) {
             message.error(err.message || '删除失败');
         }
@@ -93,6 +95,7 @@ const EmployeeList = () => {
         {
             title: '操作',
             key: 'action',
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             render: (_: any, record: Employee) => (
                 <Space size="middle">
                     <Button
