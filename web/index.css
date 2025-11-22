@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(128, 128, 128, 0.123);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center; 
+    height: 2000px;
+    overflow:scroll;
+}
+header{
+    width: 100%;
+    height:50px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+.header-container{
+    width: 1005px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-search{
+    width: 300px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    position: relative;
+svg{
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    top: 15px;
+    left: 60px;
+}
+}
+.logo-search input{
+    width:200px ;
+    height: 30px;
+    margin: 0px 10px;
+    border-radius: 25px;
+    border: 0.5px solid gray;
+    outline: none;
+    padding: 0px 40px;
+    position: relative;
+    background-color: transparent;
+}
+.logo{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #0966c2;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.menu{
+    width: 500px;
+    height: 50px;
+    display: flex;
+    gap: 0;
+}
+.content-menu{
+    width: 400px;
+    height: 50px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20px 10px;
+    gap: 4px;
+    border-right:1px solid rgba(128, 128, 128, 0.521) ;
+    padding:0 10px;
+svg{
+    width: 40px;
+    height: 30px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+svg:hover{
+    opacity: 1;
+}
+p{
+    padding-left: 4px;
+    opacity: 0.7;
+    user-select: none;
+}
+}
+.more-menu{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    padding: 0px 10px;
+    margin-left:10px ;
+.svg1{
+    width: 32px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.svg1:hover{
+    opacity: 1;
+}
+p{
+    margin-top: -10px;
+    margin-left: -5px;
+    user-select: none;
+}
+.svg2{
+    width: 10px;
+    height: 10px;
+    position: relative;
+    left: 30px;
+    top: -23px;
+}
+}
+.container{
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 200px 555px 250px;
+    grid-template-rows: 400px 500px 300px 1000px ;
+    height: 1800px;
+    gap: 15px;
+    position: relative;
+}
+.nav-container{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 200px;
+    height: 800px;
+    position: fixed;
+}
+.user-information{
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 0;
+    box-shadow: 1px 2px 4px rgba(128, 128, 128, 0.852);
+}
+.head-image{
+    width: 50px;
+    height: 50px;
+    z-index:2;
+    background-color: #3880c7;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid white;
+    top: 25px;
+    left: 25px;
+}
+.user-information::before{
+    content: "";
+    width: 200px;
+    height: 50px;
+    background-color: #A1B5B7;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    z-index: 1;
+}
+.user-friends{
+    width: 200px;
+    height: 80px;
+    position: relative;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px rgba(128, 128, 128, 0.852);
+}
+.try-to-use{
+    width: 200px;
+    height: 80px;
+    position: relative;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px rgba(128, 128, 128, 0.852);
+}
+.nav{
+    width: 200px;
+    height: 180px;
+    position: relative;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px rgba(128, 128, 128, 0.852);
+}
+.content-container{
+    grid-column: 2/3;
+    grid-row: 1/5;
+    background-color:transparent;
+    overflow: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f5f5f5;
+    padding: 5px;
+}
+.content{
+    width: 545px;
+    height: 500px;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px rgba(128, 128, 128, 0.852);
+}
+.exploration{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px rgba(128, 128, 128, 0.852);
+    position: relative;
+}
+.exploration.active{
+    height: 500px;
+}
+.news{
+    width: 250px;
+    position: relative;
+    z-index: 0;
+    height: 400px;
+div{
+    text-align: center;
+}
+}
+.flat{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 150px;
+    bottom: -10px;
+}
+.flat.active{
+    top: 460px;
+}
+.adv{
+    grid-column: 3/4;
+    width: 250px;
+    height: 300px;
+    position: sticky;
+    top: 50px;
+    background-color: white;
+    margin-top: 10px;
+    box-shadow: 1px 2px 4px rgba(128, 128, 128, 0.852);
+    border-radius: 10px;
+botton{
+    width: 50px;
+    height: 30px;
+    border: 0.5px solid gray;
+    border-radius: 2px;
+.adv-a{
+    text-decoration-line: none;
+}
+}
+}
+.adv.active{
+    margin-top: 100px;
+}
+.copy-right{
+    width: 250px;
+    height: 200px;
+    background-color: transparent;
+    position: absolute;
+    grid-column: 3/4;
+    top: 320px;
+}
+.chouti{
+    width: 300px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 1px 2px 4px rgba(128, 128, 128, 0.852);
+    border-radius: 10px;
+    position: fixed;
+    border: 0.5px solid rgba(128, 128, 128, 0.594);
+    right: 10px;
+    top: 680px;
+    transition: all 1s ease-in-out;
+}
+.chouti.active{
+    top: 200px;
+}
+.hamburger{
+    cursor: pointer;
+    display: none;
+    margin: 40px;
+    width: 50px;
+    height: 50px;
+}
+.bar1{
+    display: block;
+    background-color:gray;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0s ease-in-out;
+    z-index: 1000;
+    rotate: -45deg;
+    position: absolute;
+    left: 23px;
+}
+.bar2{
+    display: block;
+    background-color:gray;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0s ease-in-out;
+    z-index: 1000;
+    rotate: 45deg;
+    position: absolute;
+    left: 40px;
+}
+.hamburger{
+    display: block;
+}
+.hamburger.active .bar1:nth-child(1){
+    transform: translateY(0px) rotate(-90deg);
+}
+.hamburger.active .bar2:nth-child(2){
+    transform: translateY(0px) rotate(-90deg);
+}
