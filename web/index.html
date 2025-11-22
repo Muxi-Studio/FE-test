@@ -6,9 +6,449 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muxi Studio</title>
 </head>
+<style>
 
+    .back{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(191, 189, 189);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .header {
+        width: 100%;
+        height: 60px;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .header .in {
+        width: 120px;
+        height: 40px;
+        background-image: url(in.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        cursor: pointer;
+    }
+
+    .header input {
+        width: 300px;
+        height: 30px;
+        border-radius: 15px;
+        border: solid 1px #ccc;
+        outline: none;
+        position: absolute;
+        top: 15px;
+        left: 160px;
+        padding-left: 15px;
+    }
+
+    .header div {
+        height: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    .shouye {
+        width: 30px;
+        background-image: url(shouye.png);
+        left: 480px;
+        opacity: 0.5;
+    }
+
+    .shouye:hover{
+        opacity: 0.7;
+    }
+
+    .renmai {
+        width: 30px;
+        background-image: url(renmai.png);
+        left: 530px;
+        opacity: 0.8;
+    }
+
+    .renmai:hover{
+        opacity: 1;
+    }
+
+    .zhiwei {
+        width: 30px;
+        background-image: url(zhiwei.png);
+        left: 580px;
+        opacity: 0.8;
+    }
+
+    .zhiwei:hover{
+        opacity: 1;
+    }
+
+    .xiaoxi {
+        width: 30px;
+        background-image: url(xiaoxi.png);
+        left: 630px;
+        opacity: 0.8;
+    }
+
+    .xiaoxi:hover{
+        opacity: 1;
+    }
+
+    .tongzhi {  
+        width: 30px;
+        background-image: url(tongzhi.png);
+        left: 680px;
+        opacity: 0.8;
+    }
+
+    .tongzhi:hover{
+        opacity: 1;
+    }
+
+    .wo {
+        width: 30px;
+        background-image: url(wo.png);
+        left: 730px;
+        opacity: 0.8;
+    }
+
+    .wo:hover{
+        opacity: 1;
+    }
+
+    .shangwu {
+        width: 30px;
+        background-image: url(shangwu.png);
+        left: 780px;
+    }
+
+    .zhanghao {
+        width: 70px;
+        background-image: url(zhanghao.png);
+        left: 830px;
+    }
+
+    .shanyujia{
+        position: absolute;
+        top: 80px;
+        left: 15%;
+        width: 150px;
+        height: 150px;
+        background-image: url(shanyujia.png);
+        background-size: cover;
+        
+    }
+
+    .haoyou{
+        position: absolute;
+        top: 240px;
+        left: 15%;
+        width: 150px;
+        height: 40px;
+        background-image: url(haoyou.png);
+        background-size: cover;
+    }
+
+    .shiyong{
+        position: absolute;
+        top: 290px;
+        left: 15%;
+        width: 150px;
+        height: 40px;
+        background-color: white;
+        box-shadow: 0 0 5px #ccc;
+        text-align: center;
+        padding-top: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        color: #333;
+    }
+
+    .jiesuo{
+        color: grey;
+    }
+
+    .gaoji:hover{
+        color: blue;
+        cursor: pointer;
+    }
+
+    .some4{
+        position: absolute;
+        top: 350px;
+        left: 15%;
+        width: 150px;
+        height: 100px;
+        background-color: white;
+        box-shadow: 0 0 5px #ccc;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #333;
+    }
+
+    .some4-1:hover{
+        border-bottom: solid 2px black;
+        cursor: pointer;
+    }
+
+    .some4-2:hover{
+        border-bottom: solid 2px black;
+        cursor: pointer;
+    }
+
+    .some4-3:hover{
+        border-bottom: solid 2px black;
+        cursor: pointer;
+    }
+
+    .some4-4:hover{
+        border-bottom: solid 2px black;
+        cursor: pointer;
+    }
+
+    .me{
+        position: absolute;
+        top: 80px;
+        left: 30%;
+        width: 500px;
+        height: 120px;
+        background-color: white;
+        box-shadow: 0 0 5px #ccc;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #333;
+        padding-top: 10px;
+    }
+
+    .me .photo{
+        width: 50px;
+        height: 50px;
+        background-image: url(photo.png);
+        background-size: cover;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .me input{
+        width: 350px;
+        height: 30px;
+        border-radius: 15px;
+        border: solid 1px #ccc;
+        position: absolute;
+        top: 28px;
+        left: 90px;
+        outline: none;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .shiping{
+        position: absolute;
+        top: 90px;
+        left: 50px;
+        background-color: white;
+        box-shadow: 0 0 5px #ccc;
+    }
+
+    .zhaopian{
+        position: absolute;
+        top: 90px;
+        left: 200px;
+        background-color: white;
+        box-shadow: 0 0 5px #ccc;
+    }
+
+    .xiezhang{
+        position: absolute;
+        top: 90px;
+        left: 350px;
+        background-color: white;
+        box-shadow: 0 0 5px #ccc;
+    }
+
+    .shiping:hover{
+        cursor: pointer;
+        background-color: #b3aeae;
+    }
+
+    .zhaopian:hover{
+        cursor: pointer;
+        background-color: #b3aeae;
+    }
+
+    .xiezhang:hover{
+        cursor: pointer;
+        background-color: #b3aeae;
+    }
+
+    .zhongjian1{
+        position: absolute;
+        top: 220px;
+        left: 30%;
+        width: 500px;
+        height: 500px;
+        background-image: url(zhongjian1.png);
+        background-size: cover;
+        box-shadow: 0 0 5px #ccc;
+    }
+
+    .zhongjian2{
+        position: absolute;
+        top: 730px;
+        left: 30%;
+        width: 500px;
+        height: 100px;
+        background-image: url(zhongjian2.png);
+        background-size: cover;
+        box-shadow: 0 0 5px #ccc;
+    }
+
+    .zhongjian3{
+        position: absolute;
+        top: 840px;
+        left: 30%;
+        width: 500px;
+        height: 400px;
+        background-image: url(zhongjian3.png);
+        background-size: cover;
+        box-shadow: 0 0 5px #ccc;
+    }
+
+    .zhankai{
+        position: absolute;
+        top: 80px;
+        left: 70%;
+        width: 200px;
+        height: 210px;
+        background-image: url(zhankai.png);
+        background-size: cover;
+        box-shadow: 0 0 5px #ccc;
+
+    }
+
+    .btn1{
+        position: absolute;
+        top: 300px;
+        left: 70%;
+        width: 60px;
+        height: 30px;
+        border-radius: 15px;
+        border: solid 1px #ccc;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .game{
+        position: absolute;
+        top: 340px;
+        left: 70%;
+        width: 200px;
+        height: 200px;
+        background-image: url(game.png);
+        background-size: cover;
+        box-shadow: 0 0 5px #ccc;
+    }
+
+    .ad{
+        position: absolute;
+        top: 560px;
+        left: 70%;
+        width: 200px;
+        height: 170px;
+        background-image: url(ad.png);
+        background-size: cover;
+        box-shadow: 0 0 5px #ccc;
+    }
+
+    .ad a{
+        width: 35px;
+        height: 15px;
+        border-radius: 5px;
+        border: solid 1px #ccc;
+        background-color: white;
+        position: absolute;
+        top: 7px;
+        right: 3px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .btn1:hover + .zhankai{
+        height: 300px;
+        background-image: url(shouqi.png);
+    }
+
+</style>
 <body>
+<div class="back"></div>
+<div class="header">
+    <div class="in"></div>
+    <input type="text" placeholder="搜索" />
+    <div class="shouye"></div>
+    <div class="renmai"></div>
+    <div class="zhiwei"></div>
+    <div class="xiaoxi"></div>
+    <div class="tongzhi"></div>
+    <div class="wo"></div>
+    <div class="shangwu"></div>
+    <div class="zhanghao"></div>
+    
+</div>
 
+<div class="mid">
+        <div class="shanyujia"></div>
+        <div class="haoyou"></div>
+        <div class="shiyong">
+            <div class="jiesuo">解锁高级账号工具与洞察</div>
+            <div class="gaoji"><strong>试用高级账号(HK$ 0)</strong></div>
+        </div>
+        <div class="some4">
+            <div class="some4-1"><strong>我的收藏</strong></div>
+            <div class="some4-2"><strong>群组</strong></div>
+            <div class="some4-3"><strong>专栏</strong></div>
+            <div class="some4-4"><strong>活动</strong></div>
+        </div>
+        <div class="me">
+            <div class="photo"></div>
+            <input type="text" placeholder="发动态" />
+            <div class="shiping">视频</div>
+            <div class="zhaopian">照片</div>
+            <div class="xiezhang">写文章</div>
+        </div>
+        <div class="zhongjian1"></div>
+        <div class="zhongjian2"></div>
+        <div class="zhongjian3"></div>
+        <div class="shiping"></div>
+        <div class="zhankai"></div>
+        <button class="btn1">展开</button>
+        <div class="shouqi"></div>
+        <div class="game"></div>
+        
+        <button class="btn2">收起</button>
+        <div class="ad">
+            <h6><a href="https://vcnay0rphntt.feishu.cn/wiki/MMQTwPRrbiFACTkCbV8cHfvhnnc">广告</a></h6>
+        </div>
+    </div>
 </body>
 
 </html>
