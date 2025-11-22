@@ -4,6 +4,14 @@
  * @returns {any[]}
  */
 function flatten(arr) {
-  
+  let blank = []
+  for (let item of arr){
+    if(Array.isArray(item)){
+        blank.push(...flatten(item))
+    }
+    else blank.push(item)
+  }
+  return blank
 }
-console.log(flatten([[1,2,3,4],[1,[1,[1]]]])==[1,2,3,4,1,1,1])
+console.log(JSON.stringify(flatten([[1,2,3,4],[1,[1,[1]]]]))==JSON.stringify([1,2,3,4,1,1,1]))
+//  return [value, ...listToArray(rest)]
