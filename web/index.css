@@ -1,0 +1,461 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(238, 236, 225);
+}
+
+/* 头部 */
+header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  background-color: #fff;
+}
+
+.head-content {
+
+  background-color: transparent;
+  width: 1200px;
+  height: 100%;
+  display: flex;
+}
+
+.logo {
+  background-image: url(lingying.svg);
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+}
+
+.logo,
+.search-box {
+  margin-top: 5px;
+}
+
+.search-box {
+  margin-left: 10px;
+}
+
+.search {
+  border-radius: 999px;
+  border: 3px solid rgb(182, 181, 181);
+  outline: none;
+  width: 200px;
+  padding-left: 50px;
+  height: 80%;
+
+}
+
+.icon-box {
+  margin-left: 10px;
+  background-color: transparent;
+  width: 60px;
+  height: 100%;
+  color: rgb(120, 117, 117);
+  text-align: center;
+  justify-content: center;
+}
+
+.icon-box-img1 {
+  background-image: url(jinlingyingcaiwangtubiao11.svg);
+  height: 10px;
+}
+
+.icon-box-t1 {
+  margin-left: 400px;
+}
+
+.icon-box:hover {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+
+/* main */
+.main {
+  width: 1200px;
+  height: 800px;
+  display: grid;
+  margin: 0 auto;
+  position: relative;
+  top: 50px;
+  grid-template-columns: 1fr 4.5fr;
+  background-color: transparent;
+}
+
+.content {
+  margin: 10px;
+  background-color: transparent;
+}
+
+/* 左 */
+.left {
+  height: 600px;
+}
+
+.left>* {
+  border-radius: 20px;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.syj {
+  height: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 70px;
+  background-image: url(nailong.webp);
+  background-size: contain;
+}
+
+.syj-img {
+  height: 50px;
+  width: 50px;
+  background-image: url(nailong.webp);
+  background-size: contain;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: relative;
+  bottom: 25px;
+  left: 20px;
+}
+
+.syj-itd {
+  margin: 10px;
+  position: relative;
+  bottom: 30px;
+
+}
+
+.ip {
+  font-size: small;
+  color: gray;
+}
+
+.company {
+  font-size: small;
+}
+
+
+.frd {
+  height: 70px;
+  padding: 10px;
+
+  .introduction {
+    color: gray;
+  }
+}
+
+.tools {
+  padding: 10px;
+  height: 70px;
+
+  .a1 {
+    color: gray;
+    font-size: small;
+  }
+}
+
+.functions {
+  height: 120px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.functions>* {
+  display: flex;
+}
+
+.img-f1 {
+  width: 20px;
+  height: 20px;
+  background-image: url(kehuqunzu.svg);
+  background-size: contain;
+}
+
+.img-f2 {
+  width: 20px;
+  height: 20px;
+  background-image: url(xiaoxi.svg);
+  background-size: contain;
+}
+
+.img-f3 {
+  width: 20px;
+  height: 20px;
+  background-image: url(shoucang.svg);
+  background-size: contain;
+}
+
+.img-f4 {
+  width: 20px;
+  height: 20px;
+  background-image: url(zhuanlan.svg);
+  background-size: contain;
+}
+
+.container-scroll {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 3fr 1.5fr;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.text-f1,
+.text-f2,
+.text-f3,
+.text-f4 {
+  font-size: small;
+}
+
+/* 中 */
+.middle {
+  margin-top: 0;
+}
+
+.middle>* {
+  border-radius: 20px;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.middle-header {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.upper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.mid-header-img {
+  margin-top: 10px;
+  height: 50px;
+  width: 50px;
+  background-image: url(nailong.webp);
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.fa {
+  border-radius: 999px;
+  border: 3px solid rgb(203, 202, 202);
+  outline: none;
+  width: 90%;
+  padding-left: 20px;
+  height: 50px;
+  margin: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.b1,
+.b2,
+.b3 {
+  text-align: center;
+
+}
+
+.b1::before {
+  width: 10px;
+  height: 10px;
+  background-image: url(xiaoxi.svg);
+  background-size: contain;
+  position: absolute;
+  left: 40%;
+}
+
+.post-n1 {
+  height: 600px;
+  position: relative;
+}
+
+.n1-img {
+
+  background-image: url(post.png);
+  background-size: contain;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 50px;
+
+}
+
+.n1-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.ad {
+  padding: 15px;
+  height: 80px;
+
+  .ad-int {
+    color: gray;
+  }
+}
+
+.post-n2,
+.post-n3 {
+  height: 550px;
+}
+
+/* 右 */
+.right {
+  position: relative;
+  margin-top: 0;
+}
+
+.right>* {
+  border-radius: 20px;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.information {
+  height: 700px;
+
+}
+
+.follow {
+  height: 200px;
+  position: sticky;
+  top: 0;
+}
+
+.footer {
+  height: 100px;
+  position: sticky;
+  top: 210px;
+}
+
+.inf-top {
+  padding: 20px;
+  width: 100%;
+  height: 150px;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+  background-color: #fff;
+  width: 100%;
+  height: 80px;
+
+}
+
+.box1:hover {
+  background-color: rgb(184, 182, 182);
+}
+
+.box2:hover {
+  background-color: rgb(184, 182, 182);
+}
+
+.box3:hover {
+  background-color: rgb(184, 182, 182);
+}
+
+.box4:hover {
+  background-color: rgb(184, 182, 182);
+}
+
+
+.follow-img {
+  background-image: url(nailong.webp);
+  background-size: contain;
+  width: 100%;
+  height: 100px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.game>* {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.game>*:hover {
+  background-color: gainsboro;
+}
+.game-1-img{
+  background-image: url(nailong.webp);
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  border-radius: 20%;
+
+}
+.game-1-text{
+  padding-bottom: 10px;
+}
+.g01{
+  font-size: small;
+}
+.g02{
+  font-size: 13px;
+  color: gray;
+}
+.drawer {
+  border-radius: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+  transition: 0.5s all ease-in;
+}
+.footer{
+  a{
+    color: gray;
+  }
+}
+
+.drawer:hover {
+  height: 300px;
+  overflow: scroll;
+}
+
+.drawer-content {
+  width: 200px;
+  height: 50px;
+  background-color: gray;
+
+}
+
+.drawer-box {
+  width: 200px;
+  height: 500px;
+  background-color: aquamarine;
+}
