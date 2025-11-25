@@ -4,55 +4,50 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Menu from './pages/manu';
-import AddMumber from './pages/mainpage/controlmumber/Addmumber';
-import MumberMenu from './pages/mainpage/MumberMenu';
-import SearchMumber from './pages/mainpage/controlmumber/Searchmumber';
-import GetMumber from './pages/mainpage/controlmumber/Getmunber';
-import DeleteMumber from './pages/mainpage/controlmumber/Deletemumber';
+import Menu from './pages/Menu';
+import AddMumber from './pages/mainpage/controlmumber/AddMember';
+// import MemberMenu from './pages/mainpage/MemberMenu';
+// import searchMember from './pages/mainpage/controlmumber/GetEmployeeList';
+import ShowEmployee from './pages/mainpage/controlmumber/GetEmployeeList';
+// import GetMember from './pages/mainpage/controlmumber/Getmunber';
+import DeleteMumber from './pages/mainpage/controlmumber/DeleteMember';
 // import DeleteMany from './pages/mainpage/controlmumber/Deletemany';
+import GetAllEmployeeList from './pages/mainpage/controlmumber/GetEmployeeList';
 
 // 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<App />
+    path: "/",
+    element: <App />
   },
   {
-    path:"/login",
-    element:<Login />
+    path: "/login",
+    element: <Login />
   },
   {
-    path:"/register",
-    element:<Register />
+    path: "/register",
+    element: <Register />
   },
   {
-    path:'/menu',
-    element:<Menu />
+    path: '/menu',
+    element: <Menu />
   },
   {
-    path:'/mumbermenu',
-    element:<MumberMenu />
+    path: '/membermenu',
+    element: <GetAllEmployeeList />
   },
   {
-    path:'/addmumber',
-    element:<AddMumber />
+    path: '/addmember',
+    element: <AddMumber />
   },
   {
-    path:'/searchmumber',
-    element:<SearchMumber />
+    path: '/searchMember',
+    element: <ShowEmployee />
   },
   {
-    path:'/getmumber',
-    element:<GetMumber />
+    path: '/deletemember',
+    element: <DeleteMumber />
   },
-  {
-    path:'/deletemumber',
-    element:<DeleteMumber />
-  },
-  {
-    
-  }
   // {
   //   path:'/deletemany',
   //   element:<DeleteMany />

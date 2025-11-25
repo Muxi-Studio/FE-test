@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { clickLogin } from "../api/user";
-import { Input,Button } from "antd";
+import { Input,Button,message } from "antd";
 import '../style/login.css'
 
 export default function Login(){
@@ -11,7 +11,8 @@ export default function Login(){
     const handleLogin = async() => {
         const response = clickLogin(email,password)
         if((await response).status == 200){
-            alert("登陆成功")
+            message.config({ top: -200 });
+            message.success("登陆成功！",0.5)
             const token = (await response).data.data.token
             localStorage.setItem('token',token)
             navigate('/menu')
@@ -22,10 +23,7 @@ export default function Login(){
         <h1>登录</h1>
         <Input placeholder="请输入邮箱" value={email} onChange={(e)=>setEmail(e.target.value)} className="logininput"/>
         <Input placeholder="请输入密码" value={password} onChange={(e)=>setPassword(e.target.value)} className="logininput" />
-
         <Button type="primary" onClick={handleLogin} className="login">登录</Button>
-       
-        
         <Link to="/register"><Button type="primary" className="login">注册</Button></Link>
         </div>
         
