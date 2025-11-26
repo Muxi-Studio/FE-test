@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.mumbermanu{
+    width: 400px;
+    height: 800px;
+    margin:100px auto;
+}
+.mumbermanu .buttons{
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 200px;
+    
+}
+

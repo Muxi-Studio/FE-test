@@ -1,0 +1,14 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.menuBox{
+    width: 100px;
+    height: 100px;
+    margin:100px auto ;
+}
+.menuBox .mybutton{
+    margin: 10px;
+}

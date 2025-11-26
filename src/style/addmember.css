@@ -1,0 +1,7 @@
+
+.formBox div {
+    margin:10px
+}
+.ant-form-item .ant-form-item-control-input{
+    max-height: 20px;
+}

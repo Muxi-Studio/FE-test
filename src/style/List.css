@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.list{
+    position: absolute;
+    left: 250;
+    top: -200;
+}
+
+.addButton{
+    position: absolute;
+    left:450;
+    z-index: 100;
+}
+.batchDelete{
+    position: absolute;
+    left:250;
+    z-index: 100;
+}
+.ant-table-selection-col {
+  width: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+}
+
