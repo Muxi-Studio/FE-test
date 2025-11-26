@@ -1,49 +1,188 @@
-import { useState } from "react"
-import { Flex, Input,Button } from 'antd';
-import { addMumbers } from "../../../api/main"
-import '../../../style/addmember.css'
-import { useNavigate } from "react-router";
+import React from 'react';
+import { Form, Input, Button, Space, message } from 'antd';
+import { useNavigate } from 'react-router';
+import { addMumbers } from '../../../api/main';
+import '../../../style/addmember.css';
 
-export default function AddMumber() {
-    const [employeeNo, setEmployeeNo] = useState('')
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [phone, setPhone] = useState('')
-    const [position, setPosition] = useState('')
-    const [salary, setSalary] = useState('')
-    const [hireDate, setHireDate] = useState('')
-    const [status, setStatus] = useState('')
-    const [departmentId, setDepartmentId] = useState('')
-    const [roleId, setRoleId] = useState('')
-    const navigate = useNavigate()
+const layout = {
+  labelCol: { span: 6 },
+  wrapperCol: { span: 18 },
+};
 
-    const handleAdd = async () => {
-         const salaryNum = salary ? Number(salary) : 0
-        const departmentIdNum = departmentId ? Number(departmentId) : 0
-        const roleIdNum = roleId ? Number(roleId) : 0
-        const response = addMumbers(employeeNo, name, email, phone, position, salaryNum, hireDate, status, departmentIdNum, roleIdNum)
-        if ((await response).status == 201) {
-            alert("添加成功")
-            navigate('/membermenu')
-        }
-    }
+const tailLayout = {
+  wrapperCol: { offset: 6, span: 18 },
+};
 
-    return (
-        <div className="addbox">
-            <h2>添加员工</h2>
-            <Input className="addinput"  placeholder="请输入工号" value={employeeNo} onChange={(e) => setEmployeeNo(e.target.value)} />
-            <Input className="addinput" placeholder="请输入姓名" value={name} onChange={(e) => setName(e.target.value)} />
-            <Input className="addinput" placeholder="请输入邮箱" value={email} onChange={(e) => setEmail(e.target.value)} />
-            <Input className="addinput" placeholder="请输入电话" value={phone} onChange={(e) => setPhone(e.target.value)} />
-            <Input className="addinput" placeholder="请输入职务" value={position} onChange={(e) => setPosition(e.target.value)} />
-            <Input className="addinput" placeholder="请输入薪水" value={salary} onChange={(e) => setSalary(e.target.value)} />
-            <Input className="addinput" placeholder="请输入入职时间" value={hireDate} onChange={(e) => setHireDate(e.target.value)} />
-            <Input className="addinput" placeholder="请输入status" value={status} onChange={(e) => setStatus(e.target.value)} />
-            <Input className="addinput" placeholder="请输入departmentId" value={departmentId} onChange={(e) => setDepartmentId(e.target.value)} />
-            <Input className="addinput" placeholder="请输入roleId" value={roleId} onChange={(e) => setRoleId(e.target.value)} />
-            <br />
-            <Button type="primary" onClick={handleAdd} className="addbutton">添加</Button>
-        </div>
-
-    )
+interface FormValues {
+  employeeNo: string;
+  name: string;
+  email: string;
+  phone: string;
+  position: string;
+  salary: string;
+  hireDate: string;
+  status: string;
+  departmentId: string;
+  roleId: string;
 }
+
+const AddMember: React.FC = () => {
+  const [form] = Form.useForm<FormValues>();
+  const navigate = useNavigate();
+
+  const onFinish = async (values: FormValues) => {
+    try {
+      const { salary, departmentId, roleId, ...rest } = values;
+      const res = await addMumbers(
+        rest.employeeNo,
+        rest.name,
+        rest.email,
+        rest.phone,
+        rest.position,
+        Number(salary) || 0,
+        rest.hireDate,
+        rest.status,
+        Number(departmentId) || 0,
+        Number(roleId) || 0
+      );
+      if (res.status === 201) {
+        message.success('添加成功');
+        navigate('/membermenu');
+      }
+    } catch (err: any) {
+      message.error(err?.message || '添加失败');
+    }
+  };
+
+  const onReset = () => form.resetFields();
+  const onBack = () => navigate(-1);
+
+  return (
+    <div 
+    className='formBox'
+    style={{
+        maxWidth: '800px',
+        margin: '0 auto',
+        padding: '20px 40px',
+        boxSizing: 'border-box',
+    }}>
+      <h2 style={{
+        marginBottom: '16px',
+      }}>添加员工</h2>
+      <Form {...layout} form={form} name="add-member" 
+      size='small'
+      layout='horizontal'
+      style={{margin:'1px'}}
+      onFinish={onFinish}>
+        <Form.Item
+          label="工号"
+          name="employeeNo"
+          rules={[{ required: true, message: '请输入工号' }]}
+          style={{ margin: '0px' }} 
+        >
+          <Input placeholder="请输入工号" />
+        </Form.Item>
+
+        <Form.Item
+          label="姓名"
+          name="name"
+          rules={[{ required: true, message: '请输入姓名' }]}
+          style={{ marginBottom: '8px' }} 
+        >
+          <Input placeholder="请输入姓名" />
+        </Form.Item>
+
+        <Form.Item
+          label="邮箱"
+          name="email"
+          rules={[
+            { required: true, message: '请输入邮箱' },
+            { type: 'email', message: '邮箱格式不正确' },
+          ]}
+          style={{ marginBottom: '8px' }} 
+        >
+          <Input placeholder="请输入邮箱" />
+        </Form.Item>
+
+        <Form.Item
+          label="电话"
+          name="phone"
+          rules={[{ required: true, message: '请输入电话' }]}
+          style={{ marginBottom: '8px' }} 
+        >
+          <Input placeholder="请输入电话" />
+        </Form.Item>
+
+        <Form.Item
+          label="职务"
+          name="position"
+          rules={[{ required: true, message: '请输入职务' }]}
+          style={{ marginBottom: '8px' }} 
+        >
+          <Input placeholder="请输入职务" />
+        </Form.Item>
+
+        <Form.Item
+          label="薪水"
+          name="salary"
+          rules={[{ required: true, message: '请输入薪水' }]}
+          style={{ marginBottom: '8px' }} 
+        >
+          <Input type="number" placeholder="请输入薪水" />
+        </Form.Item>
+
+        <Form.Item
+          label="入职时间"
+          name="hireDate"
+          rules={[{ required: true, message: '请输入入职时间' }]}
+          style={{ marginBottom: '8px' }} 
+        >
+          <Input placeholder="例：2023-01-01" />
+        </Form.Item>
+
+        <Form.Item
+          label="状态"
+          name="status"
+          rules={[{ required: true, message: '请输入状态' }]}
+          style={{ marginBottom: '8px' }} 
+        >
+          <Input placeholder="请输入状态" />
+        </Form.Item>
+
+        <Form.Item
+          label="部门 ID"
+          name="departmentId"
+          rules={[{ required: true, message: '请输入部门 ID' }]}
+          style={{ marginBottom: '8px' }} 
+        >
+          <Input type="number" placeholder="请输入部门 ID" />
+        </Form.Item>
+
+        <Form.Item
+          label="角色 ID"
+          name="roleId"
+          rules={[{ required: true, message: '请输入角色 ID' }]}
+          style={{ marginBottom: '8px' }} 
+        >
+          <Input type="number" placeholder="请输入角色 ID" />
+        </Form.Item>
+
+        <Form.Item {...tailLayout}>
+          <Space>
+            <Button type="primary" htmlType="submit">
+              添加
+            </Button>
+            <Button htmlType="button" onClick={onReset}>
+              重置
+            </Button>
+            <Button htmlType="button" onClick={onBack}>
+              返回
+            </Button>
+          </Space>
+        </Form.Item>
+      </Form>
+    </div>
+  );
+};
+
+export default AddMember;
